@@ -18,7 +18,7 @@ def keyGen(n):
 	standard = [1,2,3,4,5,6,7,8,9]
 	key = ""
 	n = int(n)
-	for x in xrange(9, 9-n, -1) :
+	for x in range(9, 9-n, -1) :
 		rand = random.randrange(x)
 		key = key + str(standard.pop(rand))
 	return key
@@ -35,7 +35,7 @@ def compare(n, arg1, arg2):
 	Strikes = 0
 	BallsAndStrikes = len(a & b)
 	
-	for x in xrange(n):
+	for x in range(n):
 		if arg1[x] == arg2[x]:
 			Strikes = Strikes + 1
 	
