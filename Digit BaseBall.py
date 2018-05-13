@@ -9,7 +9,7 @@ while 1 :
 
 	while 1 :
 		print("                          Your Turn. Ask me.")
-		ask = raw_input("                          ")
+		ask = int(input("                          "))
 		result = Core.compare(n,key,ask)
 		print("                          "+str(result[0])+" Ball "+str(result[1])+" Strike")
 	
@@ -20,7 +20,7 @@ while 1 :
 		print("This is my Turn.")
 		myask = Core.keyGenInList(lst)
 		print(myask)
-		result = raw_input().split(",")
+		result = input().split(",")
 	
 		if result[1] == str(n):
 			print("I Win!")
