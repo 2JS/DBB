@@ -2,14 +2,14 @@ import Core
 
 Core.initialPrint()
 while 1 :
-	n = input("\nhow many digits? : ")
+	n = int(input("\nhow many digits? : "))
 
 	key = Core.keyGen(n)
 	lst = Core.listGen(n)
 
 	while 1 :
 		print("                          Your Turn. Ask me.")
-		ask = raw_input("                          ")
+		ask = input("                          ")
 		result = Core.compare(n,key,ask)
 		print("                          "+str(result[0])+" Ball "+str(result[1])+" Strike")
 	
@@ -20,7 +20,7 @@ while 1 :
 		print("This is my Turn.")
 		myask = Core.keyGenInList(lst)
 		print(myask)
-		result = raw_input().split(",")
+		result = input().split(",")
 	
 		if result[1] == str(n):
 			print("I Win!")
